@@ -33,7 +33,7 @@ header > h1 {
     font-size: 150px;
     text-align: center;
     font-family: var(--font-destaque);
-    color: var(--cor3);
+    color: var(--cor2);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
 }
 

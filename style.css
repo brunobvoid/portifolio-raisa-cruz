@@ -1,11 +1,17 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Shalimar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 :root{
-    --fonte-head:'Shalimar', cursive;
-    --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-destaque: 'Bebas Neue', cursive;
+    --font-padrao: 'Roboto','Arial', sans-serif;
+    --font-head: 'Josefin Sans', sans-serif;
+    --font-destaque: 'Righteous', cursive;
+
+    --cor0: #272838;
+    --cor1: #5d536b;
+    --cor2: #c2d3cd;
+    --cor3: #c44900;
+    --cor4: #ef8275;
 }
 
 * {
@@ -14,46 +20,46 @@
 }
 
 body {
-    background-color: #ffddc1;
+    background-color: var(--cor0);
 }
 
 header {
-    border-radius: 0px 0px 0px 0px;
     margin: auto;
-    background-image: linear-gradient(to bottom, #fd831e, #c206c2);
+    background-image: linear-gradient(to bottom, var(--cor0), var(--cor1) );
 }
 
 header > h1 {
-    font-size: 150px;
+    font-size: 100px;
     text-align: center;
-    font-family: var(--fonte-head);
-    color: white;
+    font-family: var(--font-destaque);
+    color: var(--cor3);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
 }
 
-nav {
+div#nav {
     text-align: center;
-    background-color: #c206c2;
-    padding: 10px;
+    background-color: var(--cor1);
+    padding-top: 0px;
+    padding-bottom: 10px;
 }
 
-nav > a {
-    font-size: 22px;
-    color: white;
+div#nav > p {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.842);
+    font-size: 20px;
+    color: var(--cor4);
     padding: 5px;
     border-radius: 10px 0px;
     text-decoration: none;
-    font-family: var(--fonte-padrão);
+    font-family: var(--font-padrao);
 }
 
-nav > a:hover {
-    color: black;
-    background-color: rgb(248, 166, 98);
-    transition-duration: .5s;
+div#topimg {
+    text-align: center;
 }
 
-picture img {
-    width: 100%;
-    margin: auto;      
+picture img { 
+    width: 900px;
+    text-align: center;
 }
 
 main {
@@ -64,9 +70,14 @@ main {
     margin-bottom: 10px;
     margin-top: 5px;
     padding: 20px;
-    background-color: white;
+    background-color: #e0e9e69a;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.494);
     border-radius: 10px 10px 10px 10px;
+}
+.text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 main img {
@@ -74,87 +85,68 @@ main img {
 }
 
 main h2 {
-    font-weight: lighter;
-    font-family:  var(--fonte-destaque);
+    font-size: 35px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.582);
+    font-weight: bold;
+    font-family:  var(--font-head);
     text-align: left;
+    margin-top: 50px;
     margin-left: 10px;
     margin-bottom: 10px;
 }
 
+article {
+    padding-bottom: 15px;
+}
+
+.sub {
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
 main p {
-    font-family: var(--fonte-padrão);
+    font-family: var(--font-padrao);
     text-indent: 20px;
     line-height: 1.5em;
 }
 
-main > ul {
+main ul {
+  
+    font-family: var(--font-padrao);
     list-style-type: none;
     text-align: left;
 }
 
-main > ul > li > a {
-    color: black;
-    padding: 5px;
-    border-radius: 5px 0px;
-    
+
+main  ul  li {
+    margin: 10px;
 }
 
-main > ul > li {
-   margin: 10px;
-}
-
-main > ul > li > a:hover {
-    background-color: #c206c2 ;
-    color: white;  
-}
-
-div.spotify {
-    background-color: #050505;
-    text-align: center;
-    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.494);
-    border-radius: 15px;
-    max-width: 70%;
-    margin: auto;
-}
-
-div.video {
-    margin:0px -20px 30px -20px;
-    padding: 20px;
-    padding-bottom: 57%;
-    position: relative;
-}
-
-div.video > iframe {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-}
-
-p.vid {
-    text-align: center;
-    margin-top: -20px;
-}
 
 footer > div {
     border-radius: 10px 10px 0px 0px;
     margin-top: 10px;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
-    height: 75px;
+    height: 150px;
     width: auto;
-    background-image: linear-gradient(45deg, rgb(253, 131, 30), rgb(194, 6, 194));
+    background-image: linear-gradient(75deg, var(--cor1), var(--cor2));
+}
+
+footer h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
+    color: var(--cor4);
+    font-family: var(--font-destaque);
+    font-size: 50px;
+}
+
+footer p {
+    color: white;
+
 }
 
 footer > div > a > img {
     margin: 10px;
-}
-
-footer > div > p {
-    display: none;
-}
-
-footer > div > p {
-    display: block;
+    max-width: 50px;
 }
